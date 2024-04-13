@@ -392,10 +392,16 @@ Our Services Section Styles And Near by Places To visit Sections
   background-attachment: fixed;
 }
 
+.further-details h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
 
 .further-details h3 {
   color: #fff;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
 }
 
