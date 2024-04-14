@@ -42,11 +42,18 @@
 
     <!-- ======= Hero Section ======= -->
 
-  <section id="hero-Section">
-    <div class="hero-heading container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Welcome to Bandipur Homestay</h1>
-    </div>
-  </section>
+    <header>
+      <div class="overlay">
+        <div class="parallax">
+          <h1>Forest<span>Parallax</span><span>Scrolling & Mousemove</span></h1>
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+          <div class="four"></div>
+          <div class="five"></div>
+        </div>
+      </div>
+    </header>
   
   <!-- End Hero Section -->
 
@@ -708,6 +715,36 @@ const glightbox = GLightbox({
 
 
 </script>
+
+
+<!-- Welcome to bandipur script  -->
+<Script>
+
+$(window).scroll(function() {
+  const 
+    a = $(this).scrollTop(),
+    b = 400,
+    t = window.pageYOffset;
+  
+  $(".parallax").css('transform', 'translate(-' + a / 1.6 + 'px, -' + 1 - a / b + 'px)');
+
+    $(".one").css('bottom', -(t * 0.3) + 'px');
+    $(".two").css('bottom', -(t * 0.4) + 'px');
+    $(".three").css('bottom', -(t * 0.5) + 'px');
+    $(".four").css('bottom', -(t * 0.6) + 'px');
+    $(".five").css('bottom',-(t * 0.7) + 'px');
+});
+
+$("header").on('mousemove', (e) => {
+  const cx = $(window).width() / 2,
+        cy = $(window).height() / 2,
+        x = ((cx - e.pageX) / cx) * 2,
+        y = ((cy - e.pageY) / cy) * 2;
+  $(".two").css('transform',`translate(${x}px, ${y}px)`);
+  $(".four").css('transform',`translate(-${x}px, ${y}px)`);
+  $(".five").css('transform',`translate(${x}px, -${y}px)`);
+});
+</Script>
 
 
 
